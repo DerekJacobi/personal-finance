@@ -1,8 +1,11 @@
 'use strict';
 
+const { name: modulePrefix } = require('../package');
+
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'personal-finance',
+    modulePrefix,
+    podModulePrefix: `${modulePrefix}/pods`,
     environment,
     rootURL: '/',
     locationType: 'auto',
